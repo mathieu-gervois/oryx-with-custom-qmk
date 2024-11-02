@@ -3,6 +3,8 @@
   See config.h options at https://docs.qmk.fm/#/config_options?id=the-configh-file
 */
 
+#define PERMISSIVE_HOLD
+
 #define COMBO_TERM 30
 
 #undef RGB_MATRIX_TIMEOUT
@@ -12,9 +14,9 @@
 #undef MOUSEKEY_WHEEL_INTERVAL
 #define MOUSEKEY_WHEEL_INTERVAL 150
 
-#define SERIAL_NUMBER "OWP0N/0gLaQ"
+#define SERIAL_NUMBER "OWP0N/BowNd"
 #define LAYER_STATE_16BIT
-#define COMBO_COUNT 12
+#define COMBO_COUNT 11
 
 #define TAPPING_TERM_PER_KEY
 #define RGB_MATRIX_STARTUP_SPD 60
