@@ -176,7 +176,7 @@ uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
         case ALL_T(KC_G):
             return g_tapping_term + 5;
         case LT(2,KC_R):
-            return g_tapping_term -5;
+            return g_tapping_term -105;
         case MT(MOD_LSFT, KC_TAB):
             return g_tapping_term -5;
         case TD(DANCE_1):
@@ -194,7 +194,7 @@ uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
         case MT(MOD_RCTL, KC_SLASH):
             return g_tapping_term + 5;
         case LT(4,KC_SPACE):
-            return g_tapping_term + 10;
+            return g_tapping_term -90;
         case MT(MOD_RSFT, KC_ENTER):
             return g_tapping_term -5;
         case LT(2,KC_TAB):
