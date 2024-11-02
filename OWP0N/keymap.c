@@ -59,23 +59,23 @@ enum tap_dance_codes {
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [0] = LAYOUT_voyager(
     TO(4),          KC_F,           KC_P,           KC_D,           KC_L,           KC_X,                                           KC_SCLN,        KC_U,           KC_O,           KC_Y,           KC_B,           KC_TRANSPARENT, 
-    KC_Z,           KC_S,           MT(MOD_LALT, KC_N),MT(MOD_LGUI, KC_T),KC_H,           KC_K,                                           KC_COMMA,       KC_A,           MT(MOD_RGUI, KC_E),MT(MOD_RALT, KC_I),KC_C,           KC_Q,           
+    KC_Z,           KC_S,           MT(MOD_LALT, KC_N),MT(MOD_LGUI, KC_T),MT(MOD_LSFT, KC_H),KC_K,                                           KC_COMMA,       MT(MOD_RSFT, KC_A),MT(MOD_RGUI, KC_E),MT(MOD_RALT, KC_I),KC_C,           KC_Q,           
     KC_TRANSPARENT, MT(MOD_LCTL, KC_V),MT(MOD_LALT | MOD_LCTL | MOD_LGUI, KC_W),ALL_T(KC_G),    KC_M,           KC_J,                                           KC_MINUS,       KC_DOT,         ALL_T(KC_QUOTE),MT(MOD_RALT | MOD_RCTL | MOD_RGUI, KC_EQUAL),MT(MOD_RCTL, KC_SLASH),KC_TRANSPARENT, 
-    KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, TD(DANCE_0),    LT(2,KC_R),                                     LT(4,KC_SPACE), OSL(3),         KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, 
-                                                    MT(MOD_LSFT, KC_TAB),TD(DANCE_1),                                    TD(DANCE_2),    MT(MOD_RSFT, KC_ENTER)
+    KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, TD(DANCE_0),    LT(2,KC_R),                                     LT(2,KC_SPACE), OSL(3),         KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, 
+                                                    LT(4,KC_TAB),   TD(DANCE_1),                                    TD(DANCE_2),    LT(4,KC_ENTER)
   ),
   [1] = LAYOUT_voyager(
     TO(0),          KC_Q,           KC_W,           KC_F,           KC_P,           KC_B,                                           KC_J,           KC_L,           KC_U,           KC_Y,           KC_SCLN,        KC_NO,          
     KC_TAB,         KC_A,           KC_R,           KC_S,           KC_T,           KC_G,                                           KC_M,           KC_N,           KC_E,           KC_I,           KC_O,           KC_BSPC,        
     KC_NO,          KC_Z,           KC_X,           KC_C,           KC_D,           KC_V,                                           KC_K,           KC_H,           KC_COMMA,       KC_DOT,         KC_SLASH,       KC_NO,          
     KC_NO,          KC_NO,          KC_LEFT_CTRL,   KC_LEFT_GUI,    KC_LEFT_ALT,    KC_SPACE,                                       KC_RIGHT_SHIFT, KC_RIGHT_ALT,   KC_NO,          KC_RIGHT_CTRL,  KC_NO,          KC_NO,          
-                                                    LT(2,KC_TAB),   KC_ESCAPE,                                      KC_NO,          KC_ENTER
+                                                    LT(2,KC_TAB),   KC_ESCAPE,                                      KC_NO,          KC_TRANSPARENT
   ),
   [2] = LAYOUT_voyager(
     LGUI(LCTL(KC_SPACE)),TD(DANCE_3),    KC_AMPR,        KC_HASH,        KC_DLR,         KC_PERC,                                        KC_EQUAL,       KC_7,           KC_8,           KC_9,           KC_COMMA,       QK_LLCK,        
     CW_TOGG,        TD(DANCE_4),    TD(DANCE_5),    TD(DANCE_6),    TD(DANCE_7),    KC_GRAVE,                                       KC_PLUS,        KC_4,           KC_5,           KC_6,           KC_ASTR,        KC_DOT,         
     KC_TRANSPARENT, KC_BSLS,        RALT(KC_BSLS),  RALT(RSFT(KC_BSLS)),LALT(LSFT(KC_2)),KC_TILD,                                        KC_MINUS,       KC_1,           KC_2,           KC_3,           KC_SLASH,       KC_TRANSPARENT, 
-    KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, TD(DANCE_8),    KC_TRANSPARENT,                                 KC_0,           KC_SPACE,       KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, 
+    KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, TD(DANCE_8),    KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_SPACE,       KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, 
                                                     KC_TRANSPARENT, KC_TRANSPARENT,                                 TD(DANCE_9),    TD(DANCE_10)
   ),
   [3] = LAYOUT_voyager(
@@ -90,7 +90,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_NO,          KC_LEFT,        KC_UP,          KC_DOWN,        KC_RIGHT,       LGUI(KC_GRAVE),                                 LGUI(LCTL(KC_9)),KC_RIGHT_SHIFT, KC_RIGHT_GUI,   KC_RIGHT_ALT,   KC_RIGHT_CTRL,  KC_NO,          
     KC_NO,          LSFT(KC_LEFT),  LSFT(KC_UP),    LSFT(KC_DOWN),  RSFT(KC_RIGHT), KC_NO,                                          QK_LLCK,        LALT(LGUI(KC_1)),LALT(LGUI(KC_2)),LALT(LGUI(KC_3)),KC_NO,          KC_NO,          
     KC_NO,          KC_NO,          KC_NO,          KC_NO,          LGUI(KC_BSPC),  LALT(KC_BSPC),                                  KC_TRANSPARENT, KC_TRANSPARENT, KC_NO,          KC_NO,          KC_NO,          KC_NO,          
-                                                    LGUI(KC_LBRC),  LGUI(KC_RBRC),                                  KC_NO,          KC_TRANSPARENT
+                                                    KC_TRANSPARENT, LGUI(KC_RBRC),                                  KC_NO,          KC_TRANSPARENT
   ),
   [5] = LAYOUT_voyager(
     TO(1),          KC_NO,          RGB_VAD,        RGB_SLD,        RGB_VAI,        RGB_MODE_FORWARD,                                KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,          
@@ -137,17 +137,16 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 };
 
 const uint16_t PROGMEM combo0[] = { KC_L, KC_P, COMBO_END};
-const uint16_t PROGMEM combo1[] = { KC_COMMA, KC_A, COMBO_END};
-const uint16_t PROGMEM combo2[] = { LT(2,KC_R), LT(4,KC_SPACE), COMBO_END};
-const uint16_t PROGMEM combo3[] = { KC_MINUS, LT(4,KC_SPACE), COMBO_END};
-const uint16_t PROGMEM combo4[] = { LT(2,KC_R), MT(MOD_LSFT, KC_TAB), COMBO_END};
+const uint16_t PROGMEM combo1[] = { MT(MOD_RSFT, KC_A), KC_COMMA, COMBO_END};
+const uint16_t PROGMEM combo2[] = { LT(2,KC_R), LT(2,KC_SPACE), COMBO_END};
+const uint16_t PROGMEM combo3[] = { KC_MINUS, LT(2,KC_SPACE), COMBO_END};
+const uint16_t PROGMEM combo4[] = { LT(2,KC_R), LT(4,KC_TAB), COMBO_END};
 const uint16_t PROGMEM combo5[] = { TD(DANCE_0), LT(2,KC_R), COMBO_END};
-const uint16_t PROGMEM combo6[] = { KC_S, KC_H, COMBO_END};
+const uint16_t PROGMEM combo6[] = { KC_S, MT(MOD_LSFT, KC_H), COMBO_END};
 const uint16_t PROGMEM combo7[] = { MT(MOD_LCTL, KC_V), MT(MOD_LALT | MOD_LCTL | MOD_LGUI, KC_W), COMBO_END};
 const uint16_t PROGMEM combo8[] = { MT(MOD_LALT | MOD_LCTL | MOD_LGUI, KC_W), ALL_T(KC_G), COMBO_END};
 const uint16_t PROGMEM combo9[] = { ALL_T(KC_G), KC_M, COMBO_END};
-const uint16_t PROGMEM combo10[] = { MT(MOD_LGUI, KC_T), MT(MOD_RGUI, KC_E), COMBO_END};
-const uint16_t PROGMEM combo11[] = { MT(MOD_LSFT, KC_TAB), MT(MOD_RSFT, KC_ENTER), COMBO_END};
+const uint16_t PROGMEM combo10[] = { LT(4,KC_TAB), LT(4,KC_ENTER), COMBO_END};
 
 combo_t key_combos[COMBO_COUNT] = {
     COMBO(combo0, ST_MACRO_0),
@@ -160,8 +159,7 @@ combo_t key_combos[COMBO_COUNT] = {
     COMBO(combo7, LGUI(KC_Z)),
     COMBO(combo8, LGUI(KC_C)),
     COMBO(combo9, LGUI(KC_V)),
-    COMBO(combo10, OSM(MOD_RSFT)),
-    COMBO(combo11, OSL(7)),
+    COMBO(combo10, OSL(7)),
 };
 
 uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
@@ -172,8 +170,8 @@ uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
             return g_tapping_term + 5;
         case MT(MOD_LGUI, KC_T):
             return g_tapping_term + 5;
-        case KC_H:
-            return g_tapping_term + 10;
+        case MT(MOD_LSFT, KC_H):
+            return g_tapping_term -5;
         case MT(MOD_LCTL, KC_V):
             return g_tapping_term + 5;
         case MT(MOD_LALT | MOD_LCTL | MOD_LGUI, KC_W):
@@ -181,13 +179,13 @@ uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
         case ALL_T(KC_G):
             return g_tapping_term + 5;
         case LT(2,KC_R):
-            return g_tapping_term -105;
-        case MT(MOD_LSFT, KC_TAB):
+            return g_tapping_term -5;
+        case LT(4,KC_TAB):
             return g_tapping_term -5;
         case TD(DANCE_1):
             return g_tapping_term + 150;
-        case KC_A:
-            return g_tapping_term + 10;
+        case MT(MOD_RSFT, KC_A):
+            return g_tapping_term -5;
         case MT(MOD_RGUI, KC_E):
             return g_tapping_term + 5;
         case MT(MOD_RALT, KC_I):
@@ -198,9 +196,9 @@ uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
             return g_tapping_term + 5;
         case MT(MOD_RCTL, KC_SLASH):
             return g_tapping_term + 5;
-        case LT(4,KC_SPACE):
-            return g_tapping_term -90;
-        case MT(MOD_RSFT, KC_ENTER):
+        case LT(2,KC_SPACE):
+            return g_tapping_term + 10;
+        case LT(4,KC_ENTER):
             return g_tapping_term -5;
         case LT(2,KC_TAB):
             return g_tapping_term -5;
@@ -240,7 +238,7 @@ uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
             return g_tapping_term + 20;
         case KC_SLASH:
             return g_tapping_term + 20;
-        case KC_0:
+        case KC_TRANSPARENT:
             return g_tapping_term -20;
         case TD(DANCE_9):
             return g_tapping_term + 20;
@@ -251,8 +249,6 @@ uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
         case LCTL(LSFT(KC_TAB)):
             return g_tapping_term + 20;
         case LALT(KC_BSPC):
-            return g_tapping_term + 20;
-        case LGUI(KC_LBRC):
             return g_tapping_term + 20;
         case LGUI(KC_RBRC):
             return g_tapping_term + 20;
