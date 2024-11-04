@@ -147,7 +147,6 @@ const uint16_t PROGMEM combo7[] = { MT(MOD_LALT | MOD_LCTL | MOD_LGUI, KC_W), KC
 const uint16_t PROGMEM combo8[] = { MT(MOD_LALT | MOD_LCTL | MOD_LGUI, KC_W), ALL_T(KC_G), COMBO_END};
 const uint16_t PROGMEM combo9[] = { ALL_T(KC_G), KC_M, COMBO_END};
 const uint16_t PROGMEM combo10[] = { LT(4,KC_ENTER), LT(2,KC_TAB), COMBO_END};
-const uint16_t PROGMEM combo11[] = { MT(MOD_LSFT, KC_H), MT(MOD_RSFT, KC_A), COMBO_END};
 
 combo_t key_combos[COMBO_COUNT] = {
     COMBO(combo0, ST_MACRO_0),
@@ -161,7 +160,6 @@ combo_t key_combos[COMBO_COUNT] = {
     COMBO(combo8, LGUI(KC_C)),
     COMBO(combo9, LGUI(KC_V)),
     COMBO(combo10, OSL(7)),
-    COMBO(combo11, OSM(MOD_LSFT)),
 };
 
 uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
@@ -609,11 +607,11 @@ void dance_12_reset(tap_dance_state_t *state, void *user_data) {
 tap_dance_action_t tap_dance_actions[] = {
         [DANCE_0] = ACTION_TAP_DANCE_TAP_HOLD(KC_BSPC, LALT(KC_BSPC)),
         [DANCE_1] = ACTION_TAP_DANCE_TAP_HOLD(KC_ESCAPE, LCTL(LGUI(KC_Q))),
-        [DANCE_3] = ACTION_TAP_DANCE_TAP_HOLD(KC_EXLM, LALT(KC_1)),
+        [DANCE_3] = ACTION_TAP_DANCE_TAP_HOLD(LSFT(KC_1), LALT(KC_1)),
         [DANCE_4] = ACTION_TAP_DANCE_TAP_HOLD(KC_AT, LALT(KC_9)),
         [DANCE_5] = ACTION_TAP_DANCE_TAP_HOLD(KC_LPRN, KC_LBRC),
         [DANCE_6] = ACTION_TAP_DANCE_TAP_HOLD(KC_RPRN, KC_RBRC),
-        [DANCE_7] = ACTION_TAP_DANCE_TAP_HOLD(KC_QUES, LALT(LSFT(KC_SLASH))),
+        [DANCE_7] = ACTION_TAP_DANCE_TAP_HOLD(LSFT(KC_SLASH), LALT(LSFT(KC_SLASH))),
         [DANCE_8] = ACTION_TAP_DANCE_TAP_HOLD(KC_BSPC, LALT(KC_BSPC)),
         [DANCE_9] = ACTION_TAP_DANCE_TAP_HOLD(LALT(KC_GRAVE), LALT(KC_U)),
         [DANCE_10] = ACTION_TAP_DANCE_TAP_HOLD(RALT(KC_E), LALT(KC_I)),
