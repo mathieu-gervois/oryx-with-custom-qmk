@@ -25,7 +25,6 @@ enum custom_keycodes {
   ST_MACRO_17,
   ST_MACRO_18,
   ST_MACRO_19,
-  ST_MACRO_20,
 };
 
 
@@ -54,9 +53,9 @@ enum tap_dance_codes {
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [0] = LAYOUT_voyager(
     TO(4),          KC_F,           KC_P,           KC_D,           KC_L,           KC_X,                                           KC_SCLN,        KC_U,           KC_O,           KC_Y,           KC_B,           LGUI(LCTL(KC_Q)),
-    OSM(MOD_MEH),   KC_S,           MT(MOD_LALT, KC_N),MT(MOD_LGUI, KC_T),MT(MOD_LSFT, KC_H),KC_K,                                           KC_COMMA,       MT(MOD_RSFT, KC_A),MT(MOD_RGUI, KC_E),MT(MOD_RALT, KC_I),KC_C,           TO(6),          
+    OSM(MOD_MEH),   KC_S,           MT(MOD_LSFT, KC_N),MT(MOD_LGUI, KC_T),MT(MOD_LALT, KC_H),KC_K,                                           KC_COMMA,       MT(MOD_RALT, KC_A),MT(MOD_RGUI, KC_E),MT(MOD_RSFT, KC_I),KC_C,           TO(6),          
     KC_TRANSPARENT, MT(MOD_LCTL, KC_V),MT(MOD_LALT | MOD_LCTL | MOD_LGUI, KC_W),ALL_T(KC_G),    KC_M,           KC_J,                                           KC_MINUS,       KC_DOT,         ALL_T(KC_QUOTE),MT(MOD_RALT | MOD_RCTL | MOD_RGUI, KC_EQUAL),MT(MOD_RCTL, KC_SLASH),KC_TRANSPARENT, 
-    KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, ST_MACRO_5,     TD(DANCE_0),    LT(2,KC_R),                                     LT(4,KC_SPACE), TD(DANCE_1),    KC_F5,          KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, 
+    KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, ST_MACRO_4,     TD(DANCE_0),    LT(2,KC_R),                                     LT(4,KC_SPACE), TD(DANCE_1),    KC_F5,          KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, 
                                                     OSL(3),         OSM(MOD_LSFT),                                  OSM(MOD_RSFT),  LT(5,KC_ENTER)
   ),
   [1] = LAYOUT_voyager(
@@ -74,9 +73,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                                     KC_TRANSPARENT, KC_TRANSPARENT,                                 LGUI(LCTL(KC_L)),KC_EQUAL
   ),
   [3] = LAYOUT_voyager(
-    KC_NO,          KC_NO,          KC_NO,          ST_MACRO_6,     ST_MACRO_7,     KC_NO,                                          KC_NO,          ST_MACRO_12,    ST_MACRO_13,    ST_MACRO_14,    KC_NO,          KC_NO,          
-    KC_NO,          ST_MACRO_8,     ST_MACRO_9,     ST_MACRO_10,    ST_MACRO_11,    KC_NO,                                          KC_NO,          ST_MACRO_15,    ST_MACRO_16,    ST_MACRO_17,    LALT(KC_C),     KC_NO,          
-    KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,                                          KC_NO,          ST_MACRO_18,    ST_MACRO_19,    ST_MACRO_20,    KC_NO,          KC_NO,          
+    KC_NO,          KC_NO,          KC_NO,          ST_MACRO_5,     ST_MACRO_6,     KC_NO,                                          KC_NO,          ST_MACRO_11,    ST_MACRO_12,    ST_MACRO_13,    KC_NO,          KC_NO,          
+    KC_NO,          ST_MACRO_7,     ST_MACRO_8,     ST_MACRO_9,     ST_MACRO_10,    KC_NO,                                          KC_NO,          ST_MACRO_14,    ST_MACRO_15,    ST_MACRO_16,    LALT(KC_C),     KC_NO,          
+    KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,                                          KC_NO,          ST_MACRO_17,    ST_MACRO_18,    ST_MACRO_19,    KC_NO,          KC_NO,          
     KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,                                          LALT(KC_E),     LALT(KC_I),     KC_NO,          KC_NO,          KC_NO,          KC_NO,          
                                                     KC_NO,          KC_NO,                                          LALT(KC_U),     LALT(KC_GRAVE)
   ),
@@ -125,25 +124,22 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 };
 
 const uint16_t PROGMEM combo0[] = { KC_L, KC_P, COMBO_END};
-const uint16_t PROGMEM combo1[] = { MT(MOD_RSFT, KC_A), KC_COMMA, COMBO_END};
+const uint16_t PROGMEM combo1[] = { KC_COMMA, MT(MOD_RALT, KC_A), COMBO_END};
 const uint16_t PROGMEM combo2[] = { TD(DANCE_0), LT(2,KC_R), COMBO_END};
 const uint16_t PROGMEM combo3[] = { MT(MOD_LALT | MOD_LCTL | MOD_LGUI, KC_W), MT(MOD_LCTL, KC_V), COMBO_END};
 const uint16_t PROGMEM combo4[] = { MT(MOD_LALT | MOD_LCTL | MOD_LGUI, KC_W), ALL_T(KC_G), COMBO_END};
 const uint16_t PROGMEM combo5[] = { ALL_T(KC_G), KC_M, COMBO_END};
-const uint16_t PROGMEM combo6[] = { KC_S, MT(MOD_LSFT, KC_H), COMBO_END};
+const uint16_t PROGMEM combo6[] = { KC_S, MT(MOD_LALT, KC_H), COMBO_END};
 const uint16_t PROGMEM combo7[] = { ALL_T(KC_QUOTE), MT(MOD_RALT | MOD_RCTL | MOD_RGUI, KC_EQUAL), COMBO_END};
-const uint16_t PROGMEM combo8[] = { KC_L, MT(MOD_RALT, KC_I), COMBO_END};
-const uint16_t PROGMEM combo9[] = { MT(MOD_RCTL, KC_SLASH), KC_DOT, COMBO_END};
-const uint16_t PROGMEM combo10[] = { KC_F, KC_P, COMBO_END};
-const uint16_t PROGMEM combo11[] = { KC_P, KC_D, COMBO_END};
-const uint16_t PROGMEM combo12[] = { KC_D, KC_L, COMBO_END};
-const uint16_t PROGMEM combo13[] = { MT(MOD_LSFT, KC_H), KC_K, COMBO_END};
-const uint16_t PROGMEM combo14[] = { KC_J, LT(2,KC_R), COMBO_END};
-const uint16_t PROGMEM combo15[] = { KC_SCLN, KC_U, COMBO_END};
-const uint16_t PROGMEM combo16[] = { KC_L, KC_X, COMBO_END};
-const uint16_t PROGMEM combo17[] = { MT(MOD_RSFT, KC_A), KC_C, COMBO_END};
-const uint16_t PROGMEM combo18[] = { MT(MOD_LALT, KC_N), MT(MOD_LGUI, KC_T), COMBO_END};
-const uint16_t PROGMEM combo19[] = { MT(MOD_RGUI, KC_E), MT(MOD_RALT, KC_I), COMBO_END};
+const uint16_t PROGMEM combo8[] = { MT(MOD_RCTL, KC_SLASH), KC_DOT, COMBO_END};
+const uint16_t PROGMEM combo9[] = { KC_F, KC_P, COMBO_END};
+const uint16_t PROGMEM combo10[] = { KC_P, KC_D, COMBO_END};
+const uint16_t PROGMEM combo11[] = { KC_D, KC_L, COMBO_END};
+const uint16_t PROGMEM combo12[] = { KC_K, MT(MOD_LALT, KC_H), COMBO_END};
+const uint16_t PROGMEM combo13[] = { KC_J, LT(2,KC_R), COMBO_END};
+const uint16_t PROGMEM combo14[] = { KC_SCLN, KC_U, COMBO_END};
+const uint16_t PROGMEM combo15[] = { KC_L, KC_X, COMBO_END};
+const uint16_t PROGMEM combo16[] = { KC_C, MT(MOD_RALT, KC_A), COMBO_END};
 
 combo_t key_combos[COMBO_COUNT] = {
     COMBO(combo0, ST_MACRO_0),
@@ -154,18 +150,15 @@ combo_t key_combos[COMBO_COUNT] = {
     COMBO(combo5, LGUI(KC_V)),
     COMBO(combo6, OSL(9)),
     COMBO(combo7, ST_MACRO_2),
-    COMBO(combo8, ST_MACRO_3),
-    COMBO(combo9, LALT(LGUI(LCTL(KC_S)))),
-    COMBO(combo10, LGUI(KC_Q)),
-    COMBO(combo11, KC_Z),
-    COMBO(combo12, KC_Q),
-    COMBO(combo13, KC_TAB),
-    COMBO(combo14, KC_ENTER),
-    COMBO(combo15, ST_MACRO_4),
-    COMBO(combo16, KC_ESCAPE),
-    COMBO(combo17, TO(6)),
-    COMBO(combo18, OSM(MOD_LSFT)),
-    COMBO(combo19, OSM(MOD_RSFT)),
+    COMBO(combo8, LALT(LGUI(LCTL(KC_S)))),
+    COMBO(combo9, LGUI(KC_Q)),
+    COMBO(combo10, KC_Z),
+    COMBO(combo11, KC_Q),
+    COMBO(combo12, KC_TAB),
+    COMBO(combo13, KC_ENTER),
+    COMBO(combo14, ST_MACRO_3),
+    COMBO(combo15, KC_ESCAPE),
+    COMBO(combo16, TO(6)),
 };
 
 uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
@@ -174,11 +167,11 @@ uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
             return g_tapping_term + 10;
         case KC_S:
             return g_tapping_term + 5;
-        case MT(MOD_LALT, KC_N):
+        case MT(MOD_LSFT, KC_N):
             return g_tapping_term + 5;
         case MT(MOD_LGUI, KC_T):
             return g_tapping_term + 5;
-        case MT(MOD_LSFT, KC_H):
+        case MT(MOD_LALT, KC_H):
             return g_tapping_term + 20;
         case MT(MOD_LCTL, KC_V):
             return g_tapping_term + 5;
@@ -190,11 +183,11 @@ uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
             return g_tapping_term -5;
         case OSL(3):
             return g_tapping_term + 20;
-        case MT(MOD_RSFT, KC_A):
+        case MT(MOD_RALT, KC_A):
             return g_tapping_term + 20;
         case MT(MOD_RGUI, KC_E):
             return g_tapping_term + 5;
-        case MT(MOD_RALT, KC_I):
+        case MT(MOD_RSFT, KC_I):
             return g_tapping_term + 5;
         case KC_C:
             return g_tapping_term + 5;
@@ -397,90 +390,85 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     break;
     case ST_MACRO_3:
     if (record->event.pressed) {
-      SEND_STRING(SS_LSFT(SS_TAP(X_I)) SS_DELAY(100) SS_TAP(X_QUOTE) SS_DELAY(100) SS_TAP(X_L) SS_DELAY(100) SS_TAP(X_L) SS_DELAY(100) SS_TAP(X_SPACE));
+      SEND_STRING(SS_TAP(X_U) SS_DELAY(100) SS_TAP(X_A));
     }
     break;
     case ST_MACRO_4:
     if (record->event.pressed) {
-      SEND_STRING(SS_TAP(X_U) SS_DELAY(100) SS_TAP(X_A));
+      SEND_STRING(SS_TAP(X_LEFT_GUI) SS_DELAY(100) SS_TAP(X_LEFT_GUI));
     }
     break;
     case ST_MACRO_5:
     if (record->event.pressed) {
-      SEND_STRING(SS_TAP(X_LEFT_GUI) SS_DELAY(100) SS_TAP(X_LEFT_GUI));
+      SEND_STRING(SS_LALT(SS_TAP(X_E)) SS_DELAY(100) SS_TAP(X_O));
     }
     break;
     case ST_MACRO_6:
     if (record->event.pressed) {
-      SEND_STRING(SS_LALT(SS_TAP(X_E)) SS_DELAY(100) SS_TAP(X_O));
+      SEND_STRING(SS_LALT(SS_TAP(X_E)) SS_DELAY(100) SS_TAP(X_U));
     }
     break;
     case ST_MACRO_7:
     if (record->event.pressed) {
-      SEND_STRING(SS_LALT(SS_TAP(X_E)) SS_DELAY(100) SS_TAP(X_U));
+      SEND_STRING(SS_LALT(SS_TAP(X_N)) SS_DELAY(100) SS_TAP(X_N));
     }
     break;
     case ST_MACRO_8:
     if (record->event.pressed) {
-      SEND_STRING(SS_LALT(SS_TAP(X_N)) SS_DELAY(100) SS_TAP(X_N));
+      SEND_STRING(SS_LALT(SS_TAP(X_E)) SS_DELAY(100) SS_TAP(X_I));
     }
     break;
     case ST_MACRO_9:
     if (record->event.pressed) {
-      SEND_STRING(SS_LALT(SS_TAP(X_E)) SS_DELAY(100) SS_TAP(X_I));
+      SEND_STRING(SS_LALT(SS_TAP(X_E)) SS_DELAY(100) SS_TAP(X_E));
     }
     break;
     case ST_MACRO_10:
     if (record->event.pressed) {
-      SEND_STRING(SS_LALT(SS_TAP(X_E)) SS_DELAY(100) SS_TAP(X_E));
+      SEND_STRING(SS_LALT(SS_TAP(X_E)) SS_DELAY(100) SS_TAP(X_A));
     }
     break;
     case ST_MACRO_11:
     if (record->event.pressed) {
-      SEND_STRING(SS_LALT(SS_TAP(X_E)) SS_DELAY(100) SS_TAP(X_A));
+      SEND_STRING(SS_LALT(SS_TAP(X_I)) SS_DELAY(100) SS_TAP(X_U));
     }
     break;
     case ST_MACRO_12:
     if (record->event.pressed) {
-      SEND_STRING(SS_LALT(SS_TAP(X_I)) SS_DELAY(100) SS_TAP(X_U));
+      SEND_STRING(SS_LALT(SS_TAP(X_I)) SS_DELAY(100) SS_TAP(X_O));
     }
     break;
     case ST_MACRO_13:
     if (record->event.pressed) {
-      SEND_STRING(SS_LALT(SS_TAP(X_I)) SS_DELAY(100) SS_TAP(X_O));
+      SEND_STRING(SS_LALT(SS_TAP(X_GRAVE)) SS_DELAY(100) SS_TAP(X_U));
     }
     break;
     case ST_MACRO_14:
     if (record->event.pressed) {
-      SEND_STRING(SS_LALT(SS_TAP(X_GRAVE)) SS_DELAY(100) SS_TAP(X_U));
+      SEND_STRING(SS_LALT(SS_TAP(X_GRAVE)) SS_DELAY(100) SS_TAP(X_A));
     }
     break;
     case ST_MACRO_15:
     if (record->event.pressed) {
-      SEND_STRING(SS_LALT(SS_TAP(X_GRAVE)) SS_DELAY(100) SS_TAP(X_A));
+      SEND_STRING(SS_LALT(SS_TAP(X_E)) SS_DELAY(100) SS_TAP(X_E));
     }
     break;
     case ST_MACRO_16:
     if (record->event.pressed) {
-      SEND_STRING(SS_LALT(SS_TAP(X_E)) SS_DELAY(100) SS_TAP(X_E));
+      SEND_STRING(SS_LALT(SS_TAP(X_GRAVE)) SS_DELAY(100) SS_TAP(X_E));
     }
     break;
     case ST_MACRO_17:
     if (record->event.pressed) {
-      SEND_STRING(SS_LALT(SS_TAP(X_GRAVE)) SS_DELAY(100) SS_TAP(X_E));
+      SEND_STRING(SS_LALT(SS_TAP(X_I)) SS_DELAY(100) SS_TAP(X_A));
     }
     break;
     case ST_MACRO_18:
     if (record->event.pressed) {
-      SEND_STRING(SS_LALT(SS_TAP(X_I)) SS_DELAY(100) SS_TAP(X_A));
-    }
-    break;
-    case ST_MACRO_19:
-    if (record->event.pressed) {
       SEND_STRING(SS_LALT(SS_TAP(X_I)) SS_DELAY(100) SS_TAP(X_E));
     }
     break;
-    case ST_MACRO_20:
+    case ST_MACRO_19:
     if (record->event.pressed) {
       SEND_STRING(SS_LALT(SS_TAP(X_I)) SS_DELAY(100) SS_TAP(X_I));
     }
