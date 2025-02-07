@@ -4,6 +4,16 @@
 #define MOON_LED_LEVEL LED_LEVEL
 #define ML_SAFE_RANGE SAFE_RANGE
 
+uint16_t achordion_timeout(uint16_t tap_hold_keycode) {
+  switch (tap_hold_keycode) {
+    case LT(2,KC_R):
+    case LT(4,KC_SPACE):
+      return 0;  // Bypass Achordion for these keys.
+  }
+
+  return 800;  // Otherwise use a timeout of 800 ms.
+}
+
 enum custom_keycodes {
   RGB_SLD = ML_SAFE_RANGE,
   ST_MACRO_0,
